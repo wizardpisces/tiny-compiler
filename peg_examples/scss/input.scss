@@ -1,0 +1,16 @@
+$top : 20px;
+$height : 30px;
+.main {
+  margin  : $margin;   
+  left: 1px;
+  .child1 {
+     left: 1px;
+     .child2 {
+         height: $height;
+     }
+
+     .child2 {
+         height: $height;
+     }
+  }
+}

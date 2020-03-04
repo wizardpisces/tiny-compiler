@@ -109,7 +109,7 @@ const evaluate = ast => {
   };
 
   if (ast.type === Num) return ast.val;
-  return opAcMap[ast.val](ast.expr.map(evaluate));
+  return opAcMap[ast.val](ast.expr.map(evaluate)).toString();
 };
 
 /*
@@ -128,6 +128,7 @@ const compile = ast => {
 
 const program = 'mul 3 sub 2 sum 1 3 4';
 
+console.log(JSON.stringify(parse(lex(program))))
 /*
   # Interpreter
 
